@@ -1,5 +1,6 @@
 # Survive618
 **All Rights Reserved. © 2024 Survive618 Ad-TEAM.**
+
 **版权所有 © 2024 求生618 Ad-TEAM。保留所有权利。此游戏基于开源协议，遵循开源精神。**
 ## 什么是 Survive618？
 Survive618 是一个用[Python](https://python.org)做的纯命令行游戏。此游戏由[Ad_closeNN](https://github.com/Ad-closeNN)所制作，里面的`Ad-Team`只是一个设想，并不是真正有这个团队~~(也许以后会有, 但基本不可能)~~。游戏围绕着**校园**这个话题展开，包括**日常活动** **上课** **食堂** **宿舍** 等。
