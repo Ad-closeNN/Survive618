@@ -26,7 +26,7 @@ Survive618 是一个用[Python](https://python.org)做的纯命令行游戏。�
 ![GitHub Repo stars](https://img.shields.io/github/stars/Ad-closeNN/Survive618?style=flat)
 
 
-当前版本: [V0.0.2](https://github.com/Ad-closeNN/Survive618/releases/latest) (2024/2/5) [Pre-Release]
+当前版本: [V0.5](https://github.com/Ad-closeNN/Survive618/releases/latest) (2024/2/13) [Pre-Release]
 > [!IMPORTANT]
 > 使用之前请确保你的电脑支持运行本游戏
 
