@@ -12,6 +12,8 @@
 > [**Beta** - **测试版**](https://github.com/Ad-closeNN/Survive618/tree/Beta) 游戏的**测试**版本, 包括`未知的bug, 最新的内容`
 > 
 > [**Speed** - **极速版**](https://github.com/Ad-closeNN/Survive618/tree/Speed) 游戏的**极速**版本, 包括`无等待的对话速度, 与完整版相同的内容`
+# 其他分支
+> [**Website** - **网站**](https://github.com/Ad-closeNN/Survive618/tree/Website) 游戏的**网页**, 存放游戏的介绍。~~当然现在没做网站还是markdown格式~~
 ## 什么是 Survive618？
 Survive618 是一个用[Python](https://python.org)做的纯命令行游戏。此游戏由[Ad_closeNN](https://github.com/Ad-closeNN)所制作，里面的`Ad-Team`只是一个设想，并不是真正有这个团队(也许以后会有, 但基本不可能)。游戏围绕着**校园**这个话题展开，包括**日常活动** **上课** **食堂** **宿舍** 等。
 ## 怎么玩？
