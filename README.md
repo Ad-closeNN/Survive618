@@ -1,5 +1,3 @@
-> [!IMPORTANT]
-> [注意一下](https://github.com/Ad-closeNN/Survive618/commit/9176c8c608fceec4156069140e419e1208cc121f#r138671920)
 # Survive618
 > [!IMPORTANT]
 > 本版本为**完整版**, 如只需体验, 可使用[极速版](https://github.com/Ad-closeNN/Survive618/tree/Speed)
