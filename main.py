@@ -1,26 +1,47 @@
 point = 0 #你的分数
-import time
-def o(text): #等效于 print , 只是增加了暂停, 类似于 ChatGPT
+
+from time import * #载入 time 的所有. 防止以后pyinstaller不支持improt *
+def o(text): #等效于 print , 只是增加了暂停, 类似于 ChatGPT /0.05秒暂停/ [普通]
     for char in text:
         print(char, end='', flush=True)  # 使用 end='' 避免换行，flush=True 立即输出
         time.sleep(0.05)  # 暂停 0.05 秒
     print()  # 打印换行符，以便下一行文本能够另起一行
-#另一版的open ai, 在d1的捡钱部分
-def o2(text):
+
+def o2(text):#另一版的暂停, 在day1的 捡钱部分 /1秒暂停/
     for char in text:
-        print(char, end='', flush=True)  # 使用 end='' 避免换行，flush=True 立即输出
+        print(char, end='', flush=True)
         time.sleep(1)  # 暂停 1 秒
-    print()  # 打印换行符，以便下一行文本能够另起一行
+    print()
 
-o('\n')
-copyright_en = "All Rights Reserved. © 2024 Survive618 Ad-TEAM."
-copyright_cn = "版权所有 © 2024 求生618 Ad-TEAM。保留所有权利。此游戏基于开源协议，遵循开源精神。"
+def o3(text):#另一版的暂停, 用于 加快许可声明 /0.02秒暂停/
+    for char in text:
+        print(char, end='', flush=True)
+        time.sleep(0.02)  # 暂停 0.02 秒
+    print()
+
+def o4(text):#另一版的暂停, 用于 加快许可证提示 /0.0125秒暂停/
+    for char in text:
+        print(char, end='', flush=True)
+        time.sleep(0.0125)  # 暂停 0.0125 秒(怎么四位小数了())
+    print()
+
+#许可证及版权变量
+copyright_en = "Ad-TEAM © 2024 Survive618. This game is based on the MIT License, following the spirit of open source."
+copyright_cn = "Ad-TEAM © 2024 求生618. 此游戏基于开源协议 MIT License, 遵循开源精神."
+copyright_tip = "MIT 开源协议: 指一种开源协议, 你可自由使用、修改和分享本软件而无需支付额外费用. 此外, 修改本游戏后你可以选择标明原作者(不强求)."
 #版权声明
-o(copyright_en)
-o(copyright_cn)
-
+print('****************License Part Start****************')
+o3(copyright_en) #使用o3(0.02s)的速度加快许可播报
+o3(copyright_cn) #使用o3(0.02s)的速度加快许可播报
+o4(copyright_tip)
+print('****************License Part End****************')
+o('\n')
+time.sleep(1)
+#游戏部分
+print('****************Game Part Start****************')
 o('The day 1')
 o('叮铃铃, 起床铃在你耳边响起...你周围的舍友都起来了, 但是现在是 7:00 AM, 距离跑操铃响起还有 15 分钟.')
+
 while True: #第一天 - 早上
     o('你想做什么？\n(输入 [1] 「起床」去刷牙, 输入 [2] 继续「睡懒觉」, 输入[0] 退出 《求生618》)')
     get_up_or_sleep = input('你的选择: ')
@@ -72,6 +93,7 @@ while True: #第一天 - 早上
                 point = point - 10
                 o('你奔到了操场. 此时已经是 7:21 AM 了. 跑操铃已经结束. 同时, 你也被学生会列入「迟到」名单. 这让你很失落, 决定以后都不超时了. [你获得了 -10 积分]')
                 point = point - 10
+                break            
             if buy_breakfast_or_run == '2': #去操场
                 o('你选择了去操场.')
                 o('这时的操场并没有多少人. 你休息了一会. [你获得了 5 积分]')
@@ -80,14 +102,14 @@ while True: #第一天 - 早上
                 o('你再次休息了一会.')
                 time.sleep(1.3)
                 o('又过了一会, 跑操铃结束. 此时是 7:21 AM. 学生会来到你的班级检查人数. 突然, 你的同学跑了过来, 学生会把他列入「迟到」名单.你的内心暗自高兴.')
+                break
             else:
                 o('\n')
                 o('你输入的不是 [1] 或者 [2]. 请重新尝试.')
             #循环结束
-            print('\n---------------------')
-            o('第一天 第一章 第二幕: 早晨 - 跑操 [已完成] '+'你目前的积分: ' + str(point))
-            print('---------------------\n')
-            break
+        print('\n---------------------')
+        o('第一天 第一章 第二幕: 早晨 - 跑操 [已完成] '+'你目前的积分: ' + str(point))
+        print('---------------------\n')
         break
     if get_up_or_sleep == '2': #继续睡懒觉
         o('你选择继续睡觉.')
@@ -261,16 +283,19 @@ def join_climb_team2(): #这个def是用来做如果不加入的话会做什么 
     o('你们分成了两队.\n')
     while True:
         o('你想做什么? \n(输入 [1] 去「左边的隧道」, 输入 [2] 去「右边的隧道」)')
+        global left_or_right #声明这是个全局变量, 可以在外面使用这个def里面的变量
         left_or_right = input('你的选择: ')
-        if left_or_right == '1':
+        if left_or_right == '1': #左边队伍的剧情
             o('你选择了去左边的隧道.')
             o('你和几名同学一起进入了左边的隧道. [你获得了 15 积分]')
             point = point + 15
             o('走着走着, 你们离洞口越来越远. 你又有点害怕了.')
             time.sleep(1.3)
             o('过了一会, 你到了隧道深处, 可最后却发现是一堵墙. 你们失望极了, 不过看了看手中的定位器, 发现现在已经是 12:25 PM 了. 你们只好回去和右边队伍汇报情况了.')
+            time.sleep(1.4)
+            o('很快, 你们来到了分叉路口. 与此同时, 右边队的人也在后 2 分钟到达了这里.')
             break #退出隧道选择循环
-        if left_or_right == '2':
+        if left_or_right == '2': #右边队伍的剧情
             o('你选择了去右边的隧道.')
             o('你和几名同学一起进入了右边的隧道. [你获得了 15 积分]')
             point = point + 15
@@ -278,7 +303,9 @@ def join_climb_team2(): #这个def是用来做如果不加入的话会做什么 
             time.sleep(1.3)
             o('这个隧道又大又长, 你们走了很久都没有走到尽头.')
             o('时间一分一秒地走着, 很快就来到了 12:25 PM. 你们只好决定返回, 去和左边隧道的人汇报情况. [你获得了 10 积分]')
-            point = point +10          
+            point = point + 10
+            time.sleep(1.4)
+            o('很快, 你们来到了分叉路口. 与此同时, 左边队的人也在后 2 分钟到达了这里.')    
             break #退出隧道选择循环
         else:
             o('\n')
@@ -306,3 +333,35 @@ while True: #循环, 选择是否跟随, 最终都会指向跟随 (你别无选�
     else:
         o('\n')
         o('你输入的不是 [1], [2] 或 [0]. 请重新尝试.')
+
+#谈话部分的def, 使用def来指定内容------
+def left_talk_about(): #左边 队伍开始分享情况
+    o('你们:"你们那边怎么样了? 有发现什么吗?"')
+    o('他们:"我们这里是一个超级长的隧道, 一眼都望不到头的那种. 由于到时间了, 所以我们就回来了. 不知你们那边有什么情况呢? 是和我们一样吗?"')
+    o('你们:"啊, 我们这里啥也没, 就一堵墙堵着路, 过不去. 要不我们去你们那边看看去? 反正能出去, 试试就试试."')
+    o('他们:"行."')
+    time.sleep(1)
+    o2('...')  
+    print('\n---------------------')
+    o('第二天 第二章 第三幕: 分享情况 [已完成] '+'你目前的积分: ' + str(point)) #day 2 <2/2 - 3 分享探索获得的情况>
+    print('---------------------\n')
+def right_talk_about(): #右边 队伍开始分享情况
+    o('你们:"你们那边怎么样了? 有什么发现吗?"')
+    o('他们:"啊, 我们这里啥也没, 就一堵墙堵着路. 不知你们那边有什么情况呢? 是和我们一样吗?"')
+    o('你们:"我们这里是一个超级长的隧道, 一眼都望不到头的那种. 由于到时间了, 所以我们就回来了. 要不你们去我们这边看看去? 反正能出去, 试试就试试."')
+    o('他们:"行."')
+    time.sleep(1)
+    o2('...')   
+    print('\n---------------------')
+    o('第二天 第二章 第三幕: 分享情况 [已完成] '+'你目前的积分: ' + str(point)) #day 2 <2/2 - 3 分享探索获得的情况>
+    print('---------------------\n')
+#谈话部分, 使用def来指定内容------
+
+#谈话输出部分, 使用def指定内容------
+if left_or_right == '1': #选队伍是 左边 的队伍
+    left_talk_about() #执行左边队伍分享情况的剧情
+if left_or_right == '2': #选队伍是 右边 的队伍
+    right_talk_about() #执行右边队伍分享情况的剧情
+#谈话输出部分, 使用def指定内容------
+
+o2('未完待续...')
