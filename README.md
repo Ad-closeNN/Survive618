@@ -51,4 +51,4 @@ Survive618 是一个用[Python](https://python.org)做的纯命令行游戏。�
 | Python 2.x  | Python 3.x以上  |
 | Windows XP 及以上  | Windows 10 及以上  |
 
-[![Star History Chart](https://api.star-history.com/svg?repos=Ad-closeNN/Survive618&type=Date)](https://star-history.com/#Ad-closeNN/Survive618&Date)
+<a href="https://star-history.com/#Ad-closeNN/Survive618&Date"><img src="https://api.star-history.com/svg?repos=Ad-closeNN/Survive618&type=Date"/></a>
