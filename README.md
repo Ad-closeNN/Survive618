@@ -53,6 +53,6 @@ Survive618 是一个用[Python](https://python.org)做的纯命令行游戏。�
 
 <p align="center"
   
-<a align="center" href="https://star-history.com/#Ad-closeNN/Survive618&Date"><img align="center" src="https://api.star-history.com/svg?repos=Ad-closeNN/Survive618&type=Date"/></a>
+<a align="center" href="https://github.com/ad-closenn/Survive618"><img align="center" src="https://api.star-history.com/svg?repos=Ad-closeNN/Survive618"/></a>
 
 </p>
