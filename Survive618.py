@@ -1,10 +1,10 @@
 point = 0 #你的分数
 
-import time #载入 time 的所有. 防止以后pyinstaller不支持improt *
+import time #载入 time 的所有
 def o(text): #等效于 print , 只是增加了暂停, 类似于 ChatGPT /0.05秒暂停/ [普通]
     for char in text:
         print(char, end='', flush=True)  # 使用 end='' 避免换行，flush=True 立即输出
-        time.sleep(0.05)  # 暂停 0.05 秒
+        time.sleep(0.02)  # 暂停 0.05 秒
     print()  # 打印换行符，以便下一行文本能够另起一行
 
 def o2(text):#另一版的暂停, 在day1的 捡钱部分 /1秒暂停/
